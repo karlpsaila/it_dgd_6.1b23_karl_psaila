@@ -1,9 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctv47wj1j0dl1"]
+[gd_scene load_steps=4 format=3 uid="uid://ctv47wj1j0dl1"]
 
 [ext_resource type="Texture2D" uid="uid://bl0p8tkyunlku" path="res://Resourceses/BG1.PNG" id="1_bkh4h"]
+[ext_resource type="PackedScene" uid="uid://ce0hqk25x7e3o" path="res://Icons/Hollow.tscn" id="2_x7a78"]
+[ext_resource type="PackedScene" uid="uid://iklerfg8kx0n" path="res://Icons/Letter.tscn" id="3_31vbw"]
 
 [node name="MicroGame1" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(710, 460)
 texture = ExtResource("1_bkh4h")
+
+[node name="Hollow" parent="Sprite2D" instance=ExtResource("2_x7a78")]
+
+[node name="Letter" parent="Sprite2D/Hollow" instance=ExtResource("3_31vbw")]
+position = Vector2(-406, -44)
