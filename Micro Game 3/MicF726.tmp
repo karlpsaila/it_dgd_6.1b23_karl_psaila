@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://v18leikvi0om"]
+
+[ext_resource type="Script" path="res://Micro Game 3/WordSearchGame.gd" id="1_1p36w"]
+
+[node name="MicroGame3" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1p36w")
+
+[node name="LetterGrid" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 461.0
+offset_top = 113.0
+offset_right = 1150.0
+offset_bottom = 669.0
+columns = 6
+
+[node name="ReplayButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 555.0
+offset_right = 172.0
+offset_bottom = 638.0
+text = "Replay Audio"
+
+[node name="CurrentWordLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 81.0
+offset_right = 95.0
+offset_bottom = 104.0
+
+[node name="FeedbackLabel" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Replay Audio" type="Button" parent="."]
+offset_left = 126.0
+offset_top = 1110.0
+offset_right = 235.0
+offset_bottom = 1193.0
+text = "Replay Audio"

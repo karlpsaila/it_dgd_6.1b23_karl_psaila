@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctv47wj1j0dl1"]
+
+[ext_resource type="Script" path="res://Letter/Letter.gd" id="1_ctdi5"]
+[ext_resource type="Texture2D" uid="uid://dif555ni8uog7" path="res://Resources/Alphabet/A.png" id="2_migfl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qe8ro"]
+size = Vector2(117, 136)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_ctdi5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_migfl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_qe8ro")

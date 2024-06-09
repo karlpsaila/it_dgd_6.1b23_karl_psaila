@@ -38,8 +38,15 @@ var alphabet_letters = [
 	{"Letter": "W", "image": preload("res://Resources/Alphabet/W.png")},
 	{"Letter": "X", "image": preload("res://Resources/Alphabet/X.png")},
 	{"Letter": "Y", "image": preload("res://Resources/Alphabet/Y.png")},
-	{"Letter": "Z", "image": preload("res://Resources/Alphabet/Z.png")}
+	{"Letter": "Z", "image": preload("res://Resources/Alphabet/Z.png")}]
+
+var level_3 = [
+	{"word": "train", "audio_file": preload("res://Resources/audio/train.mp3")},
+	{"word": "duck", "audio_file": preload("res://Resources/audio/duck.mp3")}
 ]
+
+func get_random_word_and_audio():
+	return level_3[randi() % level_3.size()]
 
 var current_word = ""
 var current_letters = []

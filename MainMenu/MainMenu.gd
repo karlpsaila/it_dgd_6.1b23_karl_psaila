@@ -10,3 +10,8 @@ func _ready():
 func _on_texture_button_pressed():
 	get_tree().change_scene_to_file("res://Micro Game 1/Micro Game 1.tscn")
 	pass # Replace with function body.
+
+
+func _on_texture_button_2_pressed():
+	get_tree().change_scene_to_file("res://Micro Game 3/Micro Game 3.tscn")
+	pass # Replace with function body.

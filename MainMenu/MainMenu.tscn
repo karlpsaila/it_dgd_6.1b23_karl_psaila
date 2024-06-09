@@ -92,3 +92,4 @@ theme_override_font_sizes/font_size = 50
 text = "Welcome !"
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]

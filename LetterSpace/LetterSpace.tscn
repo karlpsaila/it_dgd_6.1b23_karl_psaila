@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://n2kmnj7krw8g"]
+
+[ext_resource type="Script" path="res://LetterSpace/LetterSpace.gd" id="1_7u6gp"]
+[ext_resource type="Texture2D" uid="uid://iweuef8nhy8q" path="res://Resources/Images/square-rounded-128.png" id="2_u44f5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhdme"]
+size = Vector2(128, 128)
+
+[node name="LetterSpace" type="Area2D"]
+script = ExtResource("1_7u6gp")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_u44f5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_hhdme")
