@@ -29,5 +29,12 @@ offset_right = 1419.0
 offset_bottom = 888.0
 text = "MainMenuButton "
 
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 1280.0
+offset_top = 6.0
+offset_right = 1431.0
+offset_bottom = 33.0
+max_value = 3.0
+
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]

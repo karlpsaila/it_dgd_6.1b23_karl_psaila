@@ -40,6 +40,21 @@ var alphabet_letters = [
 	{"Letter": "Y", "image": preload("res://Resources/Alphabet/Y.png")},
 	{"Letter": "Z", "image": preload("res://Resources/Alphabet/Z.png")}]
 
+var level_2 = [
+	{"word": "chicken", "image": preload("res://Resources/Images/c1.png")},
+	{"word": "chicken", "image": preload("res://Resources/Images/c2.png")},
+	{"word": "chicken", "image": preload("res://Resources/Images/c3.png")},
+	
+	{"word": "bus", "image": preload("res://Resources/Images/bus1.png")},
+	{"word": "bus", "image": preload("res://Resources/Images/bus2.png")},
+	{"word": "bus", "image": preload("res://Resources/Images/bus3.png")},
+	
+	{"word": "water", "image": preload("res://Resources/Images/water1.png")},
+	{"word": "water", "image": preload("res://Resources/Images/water2.png")},
+	{"word": "water", "image": preload("res://Resources/Images/water3.png")},
+
+]
+
 var level_3 = [
 	{"word": "train", "audio_file": preload("res://Resources/audio/train.mp3")},
 	{"word": "duck", "audio_file": preload("res://Resources/audio/duck.mp3")},
@@ -52,6 +67,7 @@ func get_random_word_and_audio():
 	return level_3[randi() % level_3.size()]
 
 var current_word = ""
+
 var current_letters = []
 
 # Track global dragging state

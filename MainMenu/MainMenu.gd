@@ -13,7 +13,7 @@ func _on_texture_button_pressed():
 
 
 func _on_texture_button_2_pressed():
-	
+	get_tree().change_scene_to_file("res://Micro Game 2/Micro Game 2.tscn")
 	pass # Replace with function body.
 
 

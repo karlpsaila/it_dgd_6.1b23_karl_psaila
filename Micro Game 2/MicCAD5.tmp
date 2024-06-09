@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0nid46shsi76"]
+
+[ext_resource type="Script" path="res://Micro Game 2/Micro Game 2.gd" id="1_n7dty"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_n7dty")
+
+[node name="ImagesContainer" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Image1" type="Sprite2D" parent="ImagesContainer"]
+
+[node name="Image2" type="Sprite2D" parent="ImagesContainer"]
+
+[node name="Image3" type="Sprite2D" parent="ImagesContainer"]
+
+[node name="WordPanel" type="HBoxContainer" parent="."]
+offset_bottom = 40.0
+
+[node name="LetterPanel" type="HBoxContainer" parent="."]
+offset_bottom = 40.0
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_right = 4.0
+offset_bottom = 27.0
+
+[node name="HintButton" type="Button" parent="."]
+offset_left = 4.0
+offset_top = 174.0
+offset_right = 66.0
+offset_bottom = 205.0
+text = "Hint"
