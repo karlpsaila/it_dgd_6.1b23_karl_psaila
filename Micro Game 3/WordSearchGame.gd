@@ -5,6 +5,7 @@ var letter_buttons = []
 var selected_indices = []
 var audio_player
 var current_word_data
+var used_words = []
 
 func _ready():
 	randomize()  # Initialize the random number generator
@@ -14,10 +15,17 @@ func _ready():
 	start_round()
 
 func start_round():
-	current_word_data = GameData.get_random_word_and_audio()
-	$CurrentWordLabel.text = "Find the word: " + current_word_data["word"]
-	fill_grid()
-	play_audio(current_word_data["audio_file"])
+	if GameData.level_3.size() > 0:
+		current_word_data = GameData.get_random_word_and_audio()
+		# Ensure the word is not repeated
+		while current_word_data["word"] in used_words:
+			current_word_data = GameData.get_random_word_and_audio()
+		used_words.append(current_word_data["word"])
+		$CurrentWordLabel.text = "Find the word: " + current_word_data["word"]
+		fill_grid()
+		play_audio(current_word_data["audio_file"])
+	else:
+		show_completion_message()
 
 func fill_grid():
 	# Clear previous buttons
@@ -104,6 +112,7 @@ func check_selection():
 	if all_letters_in_word(selected_word, current_word_data["word"]):
 		$FeedbackLabel.text = "Correct!"
 		reset_selection()
+		start_round()  # Start the next round
 	elif selected_word.length() >= current_word_data["word"].length():
 		$FeedbackLabel.text = "Try again!"
 		reset_selection()
@@ -134,3 +143,6 @@ func play_audio(audio_file):
 	if audio_file:
 		audio_player.stream = audio_file
 		audio_player.play()
+
+func show_completion_message():
+	$FeedbackLabel.text = "Congratulations! You've completed all the rounds!"

@@ -42,7 +42,10 @@ var alphabet_letters = [
 
 var level_3 = [
 	{"word": "train", "audio_file": preload("res://Resources/audio/train.mp3")},
-	{"word": "duck", "audio_file": preload("res://Resources/audio/duck.mp3")}
+	{"word": "duck", "audio_file": preload("res://Resources/audio/duck.mp3")},
+	{"word": "fire", "audio_file": preload("res://Resources/audio/fire.mp3")},
+	{"word": "punch", "audio_file": preload("res://Resources/audio/punch.mp3")}
+	
 ]
 
 func get_random_word_and_audio():

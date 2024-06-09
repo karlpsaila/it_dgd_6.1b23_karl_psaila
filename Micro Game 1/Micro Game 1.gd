@@ -106,5 +106,7 @@ func _on_RestartButton_pressed():
 	placed_letters = 0
 	choose_random_word()
 
-func _on_MainMenuButton_pressed():
-	get_tree().change_scene("res://MainMenu.tscn")
+
+
+func _on_main_menu_button_pressed():
+	get_tree().change_scene_to_file("res://MainMenu/MainMenu.tscn")
