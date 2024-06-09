@@ -1,16 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://ctv47wj1j0dl1"]
+[gd_scene load_steps=3 format=3 uid="uid://ctv47wj1j0dl1"]
 
-[ext_resource type="Texture2D" uid="uid://bl0p8tkyunlku" path="res://Resourceses/BG1.PNG" id="1_bkh4h"]
-[ext_resource type="PackedScene" uid="uid://ce0hqk25x7e3o" path="res://Icons/Hollow.tscn" id="2_x7a78"]
-[ext_resource type="PackedScene" uid="uid://iklerfg8kx0n" path="res://Icons/Letter.tscn" id="3_31vbw"]
+[ext_resource type="Script" path="res://Micro Game 1/Micro Game 1.gd" id="1_akxu4"]
+[ext_resource type="PackedScene" uid="uid://ce0hqk25x7e3o" path="res://Letter/Hollow.tscn" id="2_x7a78"]
 
 [node name="MicroGame1" type="Node2D"]
+script = ExtResource("1_akxu4")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(710, 460)
-texture = ExtResource("1_bkh4h")
+[node name="Image" type="TextureRect" parent="."]
+offset_left = 471.0
+offset_top = 179.0
+offset_right = 923.0
+offset_bottom = 522.0
 
-[node name="Hollow" parent="Sprite2D" instance=ExtResource("2_x7a78")]
+[node name="CompletionLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
 
-[node name="Letter" parent="Sprite2D/Hollow" instance=ExtResource("3_31vbw")]
-position = Vector2(-406, -44)
+[node name="Hollow" parent="." instance=ExtResource("2_x7a78")]
+position = Vector2(646, 442)

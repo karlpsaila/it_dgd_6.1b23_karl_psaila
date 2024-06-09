@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctv47wj1j0dl1"]
+
+[ext_resource type="Script" path="res://Micro Game 1/Micro Game 1.gd" id="1_akxu4"]
+[ext_resource type="PackedScene" uid="uid://ce0hqk25x7e3o" path="res://Letter/Hollow.tscn" id="2_x7a78"]
+
+[node name="MicroGame1" type="Node2D"]
+script = ExtResource("1_akxu4")
+
+[node name="Image" type="TextureRect" parent="."]
+offset_left = 471.0
+offset_top = 179.0
+offset_right = 923.0
+offset_bottom = 522.0
+
+[node name="CompletionLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Hollow" parent="." instance=ExtResource("2_x7a78")]
+position = Vector2(646, 442)
